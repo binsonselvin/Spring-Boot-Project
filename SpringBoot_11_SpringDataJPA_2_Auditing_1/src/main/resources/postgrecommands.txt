@@ -1,0 +1,25 @@
+#connect from cmd
+psql -U postgres -d spring -p 5432 -h localhost
+
+#list databases
+\d
+
+#switch database
+\c database_name
+
+#list schema
+\d tablename
+
+#functions
+
+#currentDate
+CURRENT_DATE
+
+#currentTime
+CURENT_TIME
+
+#currentTS
+LOCALTIMESTAMP
+
+#current date and time with TZ
+NOW return

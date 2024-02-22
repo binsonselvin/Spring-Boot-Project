@@ -1,0 +1,63 @@
+package com.binson.service;
+
+import java.io.IOException;
+import java.io.InputStream;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.nio.file.StandardCopyOption;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.stereotype.Service;
+import org.springframework.web.multipart.MultipartFile;
+
+@Service
+@Configuration
+public class UploadService {
+	
+	private final Path rootLocation;
+	
+	StorageProperties properties;
+	
+	@Autowired
+	public UploadService(StorageProperties properties) {
+		this.properties = properties;
+		rootLocation = Paths.get(properties.getLocation());
+		System.out.println("ROOT LOCATION: "+rootLocation);
+	}
+	
+	public void store(MultipartFile file) throws IOException {
+		System.out.println("Store Triggered");
+		if(file.isEmpty()) {
+			System.err.println("[ERROR]: File empty..!");
+		}
+		Path destinationFile = this.rootLocation.resolve(
+				Paths.get(file.getOriginalFilename()))
+				.normalize().toAbsolutePath();
+		
+		System.out.println("destinationFile.getParent(): "+destinationFile.getParent());
+		System.out.println("rootLocation.getParent() "+rootLocation.toAbsolutePath());
+		
+		if(!destinationFile.getParent().equals(rootLocation.toAbsolutePath())) {
+			throw new Error("RootPath and DestinationPath not matching");
+		}
+		
+		try (InputStream inputStream = file.getInputStream()) {
+			Files.copy(inputStream, destinationFile,
+				StandardCopyOption.REPLACE_EXISTING);
+		}
+		
+		System.out.println("ParentFile: "+destinationFile.getParent());
+		
+		System.out.println("paths.get "+Paths.get(file.getOriginalFilename()));
+		System.out.println("paths.getNormalize "+Paths.get(file.getOriginalFilename()).normalize());
+		System.out.println("destination File: "+destinationFile);
+	}
+}
+
+
+
+
+
+

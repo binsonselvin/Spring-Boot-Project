@@ -1,0 +1,14 @@
+package com.example4;
+
+public class Example2 {
+	
+	public static void main(String[] args) {
+		
+		//With return value
+		DemoInterface demoImpl2 = (num1, num2)-> {
+			return num1+num2;
+		};
+		
+		System.out.println("Addition value: "+demoImpl2.addTwoNum(10,49));
+	}
+}

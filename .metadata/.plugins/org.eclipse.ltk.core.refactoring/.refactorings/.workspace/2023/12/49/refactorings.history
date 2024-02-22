@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">&#x0A;<refactoring comment="Rename resource &apos;example_22&apos; to &apos;RequestParam_SpringBoot_1&apos;" description="Rename resource &apos;example_22&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="/example_22" name="RequestParam_SpringBoot_1" stamp="1701881316986" updateReferences="true"/>&#x0A;<refactoring comment="Rename resource &apos;RequestParam_SpringBoot_1&apos; to &apos;SpringBoot_1_RequestParam&apos;" description="Rename resource &apos;RequestParam_SpringBoot_1&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="/RequestParam_SpringBoot_1" name="SpringBoot_1_RequestParam" stamp="1701881342428" updateReferences="true"/>
+</session>

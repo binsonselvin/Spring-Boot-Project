@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring accessors="true" comment="Delete element from project &apos;SpringBoot_9_SpringSecurity_9_H2 Database_3_JDBCTemplate_Select_1_AOP&apos;&#x0D;&#x0A;- Original project: &apos;SpringBoot_9_SpringSecurity_9_H2 Database_3_JDBCTemplate_Select_1_AOP&apos;&#x0D;&#x0A;- Original element: &apos;com.eazybytes.eazyschool.Snippet.java&apos;" description="Delete element" element1="/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.eazybytes.eazyschool{Snippet.java" elements="1" flags="589830" id="org.eclipse.jdt.ui.delete" resources="0" stamp="1706113219915" subPackages="false" version="1.0"/>
+</session>

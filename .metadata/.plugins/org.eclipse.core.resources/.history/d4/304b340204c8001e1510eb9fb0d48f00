@@ -1,0 +1,6 @@
+package com.example3;
+
+@FunctionalInterface
+public interface DemoInterface {
+	public int addTwoNum(int num1, int num2);
+}

@@ -1,0 +1,5 @@
+package com.eazybytes.eazyschool.validator;
+
+public class PasswordStrengthValidator {
+
+}
